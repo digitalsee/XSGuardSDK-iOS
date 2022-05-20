@@ -25,7 +25,9 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = "LegoSandBox.framework"
 
   #spec.frameworks = "SystemConfiguration", "CoreMedia", "WebKit", "CoreTelephony", "AdSupport", "AVKit", "AVFoundation", "Foundation", "UIKit" , "OMSDK_Aotternet"
-  # spec.libraries = "iconv", "xml2"
+  spec.libraries = "z", "c++"
 
-  spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => "-ObjC -lz -lc++" }
+  spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => "-ObjC" }
+  spec.source_files = '**/*.{h,m}'
+  spec.static_framework = true
 end
