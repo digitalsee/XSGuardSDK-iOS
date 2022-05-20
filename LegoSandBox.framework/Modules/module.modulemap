@@ -1,0 +1,6 @@
+framework module LegoSandBox {
+  umbrella header "LegoSandBox.h"
+
+  export *
+  module * { export * }
+}
